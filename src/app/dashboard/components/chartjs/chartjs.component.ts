@@ -26,7 +26,7 @@ export class ChartjsComponent implements OnInit {
           labels: d.map((item) => item.Name), // Utilisez le tableau des auteurs comme labels sur l'axe des abscisses
           datasets: [
             {
-              label: 'Nombres de documents pour les 20 éditeurs',
+              label: 'Nombres de documents édités',
               data: d.map((item) => item.number), // Utilisez le tableau des nombres pour les données sur l'axe des ordonnées
               backgroundColor: 'rgba(54, 162, 235, 0.5)',
               borderColor: 'rgba(54, 162, 235, 1)',
