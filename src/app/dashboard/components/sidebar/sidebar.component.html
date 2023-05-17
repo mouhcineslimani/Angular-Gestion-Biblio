@@ -1,0 +1,27 @@
+<div class="sidebar">
+  <div class="title">
+    <h1>Bibliothèque</h1>
+  </div>
+  <a
+    routerLinkActive="active"
+    routerLink="dashboard"
+    (click)="changeValue(true)"
+    ngClass="{{ isDashboard ? 'active' : '' }}"
+    >Tableau de bord</a
+  >
+  <a routerLinkActive="active" routerLink="authors" (click)="changeValue(false)"
+    >Auteurs</a
+  >
+  <a
+    routerLinkActive="active"
+    routerLink="documents"
+    (click)="changeValue(false)"
+    >Documents</a
+  >
+  <a
+    routerLinkActive="active"
+    routerLink="editeurs"
+    (click)="changeValue(false)"
+    >Editeurs</a
+  >
+</div>
