@@ -1,0 +1,24 @@
+<div class="container">
+        <div class="search-class">
+                <input type="text" [(ngModel)]="keyword" >
+                <span (click)="searchAuthors()">Seach</span>
+        </div>
+        <table class="data-table"> 
+            <thead>
+                <tr>  
+                    <th>Id</th><th>Author name</th><th>year born</th><th>Operation</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let author of authors">
+                    <td>{{author.id}}</td>
+                    <td>{{author.author}}</td>
+                    <td>{{author.year_born}}</td>
+                    <td>
+                        <button (click)="handleDelete(author)">delete</button>
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+</div>

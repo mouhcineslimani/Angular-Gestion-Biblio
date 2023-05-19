@@ -1,0 +1,16 @@
+<div class="container">
+    <h3>Add new author</h3>
+        <form class="form" [formGroup]="authorForm" (ngSubmit)="saveAuthor()">
+            
+                <label>Id</label>
+                <input formControlName="id">
+            
+                <label>Author Name</label>
+                <input formControlName="author">
+            
+                <label>Year Born</label>
+                <input formControlName="year_born">
+
+            <button [disabled]="authorForm.invalid">Save</button>
+        </form>
+</div>
