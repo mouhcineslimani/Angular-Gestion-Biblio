@@ -1,1 +1,16 @@
-<p>add-publisher works!</p>
+<form [formGroup]="publisherForm" (ngSubmit)="onSubmit()">
+  <label for="id">ID:</label>
+  <input type="text" id="id" formControlName="id"><br><br>
+
+  <label for="nom">Nom:</label>
+  <input type="text" id="nom" formControlName="nom"><br><br>
+
+  <label for="entreprise">Entreprise:</label>
+  <input type="text" id="entreprise" formControlName="entreprise"><br><br>
+
+  <div class="button-container">
+    <button type="button" (click)="addPublisher()">Add</button>
+    <button type="button" (click)="updatePublisher()">Update</button>
+    <button type="button" (click)="deletePublisher()">Delete</button>
+  </div>
+</form>
