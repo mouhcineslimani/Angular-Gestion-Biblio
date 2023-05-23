@@ -1,6 +1,7 @@
 .container{
     display: flex;
     flex-direction: column;
+    height: 85vh;
     border-radius: 20px;
     border: 2px solid #555273;
     font-family: Verdana, Arial, Helvetica, sans-serif;
@@ -58,4 +59,19 @@ th, td {
 
 tbody tr, td, th {
     border: 1px solid #ddd;
+}
+
+.table-container{
+    width: 90%;
+    margin: 20px auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    flex: 6;
+    overflow: auto;
+    border-radius: 7px;
+    border: 1px solid #65799b;
+
 }

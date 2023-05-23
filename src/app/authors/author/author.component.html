@@ -1,0 +1,33 @@
+<div class="container">
+        <div class="search-class">
+                <input type="number" [(ngModel)]="Au_ID" >
+                <span (click)="searchAuthors()">Seach</span>
+        </div>
+        <div class="table-container">
+            <table class="data-table"> 
+                <thead>
+                    <tr>  
+                        <th>Id</th><th>Author name</th><th>year born</th><th>Operation</th>
+                    </tr>
+                </thead>
+                <tbody *ngIf="localAuthors.length == 0">
+                    <tr >
+                        <td colspan="4">
+                            Pas De données
+                        </td>
+                    </tr> 
+                </tbody>
+                <tbody *ngIf="localAuthors.length > 0">
+                    <tr *ngFor="let author of localAuthors">
+                        <td>{{author.Au_ID}}</td>
+                        <td>{{author.Author}}</td>
+                        <td>{{author.Year_Born}}</td>
+                        <td>
+                            <button (click)="handleDelete(author)">delete</button>
+                            <button (click)="handleEdit(author)">Edit</button>
+                        </td>
+                    </tr> 
+                </tbody>
+            </table>
+        </div>    
+</div>

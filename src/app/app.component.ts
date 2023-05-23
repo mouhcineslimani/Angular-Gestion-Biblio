@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { Author } from './authors/model/author';
+import { AuthorService } from './authors/services/author.service';
 
 @Component({
   selector: 'app-root',
@@ -6,16 +8,15 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = ""
-  actions : Array<any> = [
-    {title : "Home", "route" : "/home"},
-    {title : "Authors", "route" : "/author"},
-    {title : "new Author", "route" : "/new-author"},
-  ];
+  authors?: Array<Author> = [] ;
+  selectedAuthor: Author | undefined;
+ constructor(private service: AuthorService){}
 
-  currentAction : any;
+ receiveMessage(author: Author)
+ {
+  this.service.getAuthors().subscribe(data=>{
+    this.authors = data;
+  })
+ }
 
-  setCurrentAction(action : any){
-    this.currentAction = action;
-  }
 }

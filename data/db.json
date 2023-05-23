@@ -1,19 +1,9 @@
 {
   "authors": [
     {
-      "id": 2,
-      "author": "author2",
-      "year_born": "2002"
-    },
-    {
       "id": 3,
       "author": "author3",
       "year_born": "2003"
-    },
-    {
-      "id": 4,
-      "author": "author4",
-      "year_born": "2004"
     },
     {
       "id": 5,
@@ -39,6 +29,16 @@
       "id": "200",
       "author": "Dounia Lahyani",
       "year_born": "2000"
+    },
+    {
+      "id": "201",
+      "author": "Mamouni Hadil",
+      "year_born": "2001"
+    },
+    {
+      "id": "202",
+      "author": "Askak Maryam",
+      "year_born": "2001"
     }
   ]
 }

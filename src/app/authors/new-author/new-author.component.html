@@ -3,14 +3,14 @@
         <form class="form" [formGroup]="authorForm" (ngSubmit)="saveAuthor()">
             
                 <label>Id</label>
-                <input formControlName="id">
+                <input formControlName="Au_ID">
             
                 <label>Author Name</label>
-                <input formControlName="author">
+                <input formControlName="Author">
             
                 <label>Year Born</label>
-                <input formControlName="year_born">
+                <input formControlName="Year_Born">
 
-            <button [disabled]="authorForm.invalid">Save</button>
+            <button >Save</button>
         </form>
 </div>
