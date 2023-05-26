@@ -3,12 +3,27 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { DashboardModule } from './dashboard/dashboard.module';
+import { AuthorsModule } from './authors/authors.module';
+import { HttpClientModule } from '@angular/common/http';
+import { PublishersModule } from './publishers/publishers.module';
+import { DocumentsModule } from './documents/documents.module';
 
 @NgModule({
   declarations: [AppComponent],
-  imports: [BrowserModule, AppRoutingModule, DashboardModule, FormsModule],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    DashboardModule,
+    FormsModule,
+    AuthorsModule,
+    HttpClientModule,
+    ReactiveFormsModule,
+    FormsModule,
+    PublishersModule,
+    DocumentsModule,
+  ],
   providers: [],
   bootstrap: [AppComponent],
 })

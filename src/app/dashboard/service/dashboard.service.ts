@@ -1,6 +1,11 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Data } from '../models/Date';
+import { environment } from 'src/environments/environment';
+import { Observable } from 'rxjs';
+import { Author } from 'src/app/authors/models/author';
+import { Doc } from 'src/app/documents/models/document';
+import { Publisher } from 'src/app/publishers/model/publisher';
 
 @Injectable({
   providedIn: 'root',
@@ -9,21 +14,19 @@ export class DashboardService {
   constructor(private http: HttpClient) {}
   // calling of api ( nodejs )
 
-  getData() {
-    return this.http.get<Data[]>(
-      'http://localhost:9000/biblio/publishers/statistics'
-    );
+  getData(): Observable<Data[]> {
+    return this.http.get<Data[]>(environment.apiUrl + 'publishers/statistics');
   }
 
-  getAuthorsCount() {
-    return this.http.get<[]>('http://localhost:9000/biblio/authors');
+  getAuthorsCount(): Observable<Author[]> {
+    return this.http.get<Author[]>(environment.apiUrl + 'authors');
   }
 
-  getDocumentsCount() {
-    return this.http.get<[]>('http://localhost:9000/biblio/documents');
+  getDocumentsCount(): Observable<Doc[]> {
+    return this.http.get<Doc[]>(environment.apiUrl + 'documents');
   }
 
-  getPublishersCount() {
-    return this.http.get<[]>('http://localhost:9000/biblio/publishers');
+  getPublishersCount(): Observable<Publisher[]> {
+    return this.http.get<Publisher[]>(environment.apiUrl + 'publishers');
   }
 }
